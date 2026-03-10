@@ -7,7 +7,16 @@
   <title>Prosecutor sought one crore taka for bail in ICT case, recordings show — Netra News</title>
   <link rel="stylesheet" href="styles.css">
 
-  <link rel="stylesheet" href="https://use.typekit.net/zbt2gci.css">
+  <!-- Warm up Typekit CDN connections before the stylesheet arrives -->
+  <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+  <link rel="preconnect" href="https://p.typekit.net" crossorigin>
+  <!-- Load Typekit non-blocking: preload as style, swap rel on load -->
+  <link rel="preload" href="https://use.typekit.net/zbt2gci.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://use.typekit.net/zbt2gci.css"></noscript>
+
+  <!-- Preload above-the-fold images so the browser fetches them immediately -->
+  <link rel="preload" as="image" href="assets/photos/ict-bribe.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="./assets/icons/Letter Ornament.svg">
 
   <meta name="description"
     content="A prosecutor at Bangladesh’s International Crimes Tribunal solicited one crore taka bribe in exchange for bail, according to audio recordings leaked to media. The prosecutor has since resigned from the tribunal.">
@@ -133,7 +142,8 @@
           </div>
         </div>
         <figure class="hero__art" aria-hidden="true">
-          <img loading="eager" fetchpriority="high" decoding="async" class="hero__img"
+          <img fetchpriority="high" decoding="sync" class="hero__img"
+            width="1200" height="630"
             src="assets/photos/ict-bribe.webp"
             alt="Illustration for the Netra News investigation into ICT prosecutor bribery allegations" />
         </figure>
@@ -230,7 +240,7 @@
       <p>When contacted, Md. Asaduzzaman, the law minister, refused to offer any comment.</p>
 
       <div class="section-break">
-        <img src="./assets/icons/Scale Law.svg" alt="" class="section-break-icon">
+        <img src="./assets/icons/Scale Law.svg" alt="" loading="lazy" decoding="async" class="section-break-icon">
       </div>
 
 
@@ -249,7 +259,7 @@
 
 
       <div class="section-break">
-        <img src="./assets/icons/Scale Law.svg" alt="" class="section-break-icon">
+        <img src="./assets/icons/Scale Law.svg" alt="" loading="lazy" decoding="async" class="section-break-icon">
       </div>
 
 
@@ -348,7 +358,7 @@
 
 
       <div class="section-break">
-        <img src="./assets/icons/Scale Law.svg" alt="" class="section-break-icon">
+        <img src="./assets/icons/Scale Law.svg" alt="" loading="lazy" decoding="async" class="section-break-icon">
       </div>
 
       <h2>Informing the chief prosecutor</h2>
@@ -407,7 +417,7 @@
         need for device security.</p>
 
       <div class="section-break">
-        <img src="./assets/icons/Scale Law.svg" alt="" class="section-break-icon">
+        <img src="./assets/icons/Scale Law.svg" alt="" loading="lazy" decoding="async" class="section-break-icon">
       </div>
 
       <h2>Change in the government</h2>
@@ -581,7 +591,7 @@
 
 
       <div class="section-break">
-        <img src="./assets/icons/Scale Law.svg" alt="" class="section-break-icon">
+        <img src="./assets/icons/Scale Law.svg" alt="" loading="lazy" decoding="async" class="section-break-icon">
       </div>
 
       <h2>Law minister informed</h2>
@@ -631,16 +641,13 @@
 
       <p>Talukder resigned from his position as prosecutor on Monday.●</p>
 
-
-
-      </span>
     </article>
   </main>
 
   <footer class="footer-section">
     <div id="footer-inner">
       <div class="logo">
-        <img src="./assets/icons/netralogo.svg" alt="Netra News Logo" width="250" height="25">
+        <img src="./assets/icons/netralogo.svg" alt="Netra News Logo" width="250" height="25" loading="lazy" decoding="async">
         <p>Reportage, debate, analysis</p>
       </div>
       <div class="lists">

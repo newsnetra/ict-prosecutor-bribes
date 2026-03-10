@@ -12,6 +12,7 @@
 html,
 body {
     margin: 0;
+    background-color: var(--bg);
     color: var(--text-color);
     font-variant-ligatures: normal;
     font-variation-settings: normal;
@@ -377,6 +378,8 @@ footer {
     display: flex;
     justify-content: center;
     font-family: var(--mono);
+    content-visibility: auto;
+    contain-intrinsic-size: 0 300px;
 }
 
 #footer-inner {
@@ -416,7 +419,6 @@ footer {
     margin-top: 30px;
     color: white;
     font-weight: 400;
-    font-display: swap;
 }
 
 .list {
